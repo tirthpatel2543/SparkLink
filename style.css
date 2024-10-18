@@ -27,7 +27,7 @@ header {
 .header-content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     align-items: center; /* Center vertically */
 }
 
@@ -74,7 +74,7 @@ section {
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 1200px;
-    background-color: #fff;
+    background-color: #b2e2f1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
