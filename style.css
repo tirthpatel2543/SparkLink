@@ -1,9 +1,11 @@
+/* Resetting margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
@@ -18,14 +20,15 @@ header {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack items on mobile */
+    align-items: center; /* Center items */
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center; /* Center vertically */
 }
 
 .left h1 {
@@ -58,7 +61,6 @@ header {
 
 .right nav ul li a:hover {
     background-color: #555; /* Dark grey hover effect */
-    border-color: white;
 }
 
 header p {
@@ -67,6 +69,7 @@ header p {
     text-align: center;
 }
 
+/* Section styles */
 section {
     padding: 40px 20px;
     margin: 20px auto;
@@ -108,6 +111,7 @@ ul li:hover {
     transform: translateX(10px);
 }
 
+/* Contact Form styles */
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -151,6 +155,7 @@ button:hover {
     background-color: #555; /* Dark grey hover effect */
 }
 
+/* Footer styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -164,29 +169,54 @@ footer p {
     font-size: 1em;
 }
 
-@media (min-width: 768px) {
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header content */
+        text-align: center; /* Center text */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center elements */
+    }
+
+    .right nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center; /* Center items */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .right nav ul li {
+        display: block; /* Stack items */
+    }
+
     header h1 {
-        font-size: 2.5em;
+        font-size: 1.8em; /* Slightly smaller header on mobile */
     }
 
     header p {
-        font-size: 1.5em;
+        font-size: 1.2em; /* Slightly smaller subheader */
     }
 
     section {
-        padding: 60px 40px;
+        padding: 30px 15px; /* Reduce padding for mobile */
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1em; /* Adjust paragraph size */
     }
 
     ul li {
-        font-size: 1.2em;
+        font-size: 1em; /* Adjust list item size */
     }
 
     label,
     button {
-        font-size: 1.2em;
+        font-size: 1em; /* Adjust label and button size */
     }
 }
